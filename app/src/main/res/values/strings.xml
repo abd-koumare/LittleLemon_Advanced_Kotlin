@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LittleLemon</string>
+    <string name="hamburger_btn">Hamburger</string>
+    <string name="pasta_btn">Pasta</string>
+    <string name="dish_name_default">[Dish name]</string>
+    <string name="dish_ingredients">[Dish Ingredients]</string>
+</resources>
