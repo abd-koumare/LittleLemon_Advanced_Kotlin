@@ -4,4 +4,5 @@
     <string name="pasta_btn">Pasta</string>
     <string name="dish_name_default">[Dish name]</string>
     <string name="dish_ingredients">[Dish Ingredients]</string>
+    <string name="remove_salt_btn">Remove Salt</string>
 </resources>

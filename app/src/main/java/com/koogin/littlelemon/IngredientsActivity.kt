@@ -21,13 +21,11 @@ class IngredientsActivity : AppCompatActivity() {
         }
 
         val dishName = intent.getStringExtra(EXTRA_DISH_NAME)
+
+
         val dishIngredients = when (dishName) {
-            "Hamburger" -> "Pain à hamburger\nSteak haché de bœuf\n" +
-                    "\nFromage (généralement cheddar ou american cheese)\nLaitue\n" +
-                    "Tomates en tranches\nOignons (crus ou caramélisés)\nCornichons\nKetchup\nMoutarde\n" +
-                    "\nMayonnaise"
-            "Pasta" -> "Pâtes (spaghetti, penne, fusilli, etc.)\nSauce tomate\nHuile d'olive\n" +
-                    "\nAil\nOignons\nHerbes (basilic, origan, thym)\nSel\nPoivre\nParmesan râpé (optionnel)"
+            hamburger.name -> hamburger.getIngredients()
+            pasta.name -> pasta.getIngredients()
             else -> "Unknown Ingredient"
 
         }
@@ -41,6 +39,24 @@ class IngredientsActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_DISH_NAME = "DishName"
+        val hamburger = Dish(
+            "Hamburger",
+            mutableListOf(
+                "Pain à hamburger", "Steak haché de bœuf", "Fromage (généralement cheddar ou american cheese)",
+                "Laitue", "Oignons", "Salt", "Ketchup", "Mayonnaise"
+            )
+        )
+
+        val pasta = Dish(
+            "Pasta",
+            mutableListOf(
+                "Pâtes", "Sauce tomate", "Huile d'olive", "Ail", "Oignons", "Salt", "Herbes (basilic, origan, thym)","")
+        )
+
+        fun removeSalt() {
+            hamburger.removeSalt()
+            pasta.removeSalt()
+        }
 
         fun start(context: Context, dishName: String) {
             val intent = Intent(context, IngredientsActivity::class.java)
@@ -49,4 +65,7 @@ class IngredientsActivity : AppCompatActivity() {
         }
     }
 }
+
+
+
 

@@ -2,6 +2,7 @@ package com.koogin.littlelemon
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,12 +19,20 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
         findViewById<Button>(R.id.hamburger_btn).setOnClickListener {
             IngredientsActivity.start(this, "Hamburger")
         }
 
         findViewById<Button>(R.id.pasta_btn).setOnClickListener {
             IngredientsActivity.start(this, "Pasta")
+        }
+
+
+        findViewById<Button>(R.id.remove_salt_btn).setOnClickListener {
+            IngredientsActivity.removeSalt()
+
+            showToast("Salt removed") // extension func for AppCompactActivity
         }
     }
 }

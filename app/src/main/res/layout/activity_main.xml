@@ -27,6 +27,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/pasta_btn" />
+
+        <Button
+            android:id="@+id/remove_salt_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E91E63"
+            android:text="@string/remove_salt_btn" />
     </LinearLayout>
+
+
 
 </LinearLayout>
